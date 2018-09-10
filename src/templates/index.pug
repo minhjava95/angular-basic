@@ -10,5 +10,13 @@ block variables
 block body
 	.container
 		.row
-			.col
+			.col-md-3
 				h1 {{message}}
+				ul
+					li(ng-repeat= "i in menu")
+						a(href="{{i.link}}") {{i.name}}
+			.col-md-9
+				.row(ng-controller="ProductController")
+					.col-md-4(ng-repeat= "z in products")
+						img.img-fluid(src="{{z.img}}", alt="", srcset="")
+			
